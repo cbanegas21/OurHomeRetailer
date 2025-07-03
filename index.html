@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Home Reporting Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url("background.png") center/cover no-repeat;
+      z-index: -1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    /* HEADER */
+    .header {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(to right, #73aeea, #2451f6);
+      padding: 15px 30px;
+    }
+    .header-logo-wrapper {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 6px 12px;
+      border-radius: 50px;
+    }
+    .header img {
+      height: 48px;
+    }
+    .header h1 {
+      color: #abf4fd;
+      font-size: 1.6em;
+      font-weight: 700;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 40px 20px;
+      overflow-y: auto;
+    }
+
+    .welcome-box {
+      background: rgba(255, 255, 255, 0.349);
+      backdrop-filter: blur(10px);
+      padding: 25px 35px;
+      border-radius: 4px;
+      max-width: 600px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .welcome-box h2 {
+      color: #2dfb91;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .welcome-box p {
+      color: #ffffff;
+      font-size: 1em;
+    }
+
+    .subtext {
+      color: #abf4fd;
+      margin-top: 8px;
+      font-size: 0.95em;
+      font-weight: 500;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-bottom: 60px; 
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .report-card {
+      background: rgba(255, 255, 255, 0.472);
+      backdrop-filter: blur(10px);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .report-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 18px rgba(86, 211, 136, 0.9);
+    }
+
+    .report-card img {
+      width: 100%;
+      height: 76px;
+      object-fit: contain;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .report-card span {
+      display: block;
+      padding: 12px;
+      font-size: 1em;
+      text-align: center;
+      font-weight: 600;
+      color: #000000;
+      text-shadow:
+        -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+        1px  1px 0 #fff;
+    }
+
+
+
+    .report-card a {
+      text-decoration: none;
+      display: block;
+    }
+
+    footer {
+      flex: 0 0 auto;
+      background: linear-gradient(to right, #40566d, #2451f6);
+      color: #ffffff;
+      text-align: center;
+      padding: 22px;
+      font-size: 0.95em;
+    }
+
+    footer a {
+      color: #2dfb91;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 1024px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+      .header img {
+        height: 42px;
+      }
+      .header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- HEADER -->
+    <div class="header">
+      <div class="header-logo-wrapper">
+        <img src="logo.png" alt="Our Home Logo" />
+      </div>
+      <h1>Our Home Reporting Portal</h1>
+      <img src="CAFORTUNE.png" alt="CAFORTUNE Logo" />
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="welcome-box">
+        <h2>Welcome to Our Home Retailer Reporting Portal</h2>
+        <p>Quickly access your reports.</p>
+        <div class="subtext">Reports V2</div>
+      </div>
+
+      <div class="gallery">
+  <div class="report-card">
+    <a href="https://app.powerbi.com/view?r=eyJrIjoiYTcxYzkzMDgtMjNhNy00OTRmLWExNzEtZTY4NzM3YTUxN2JkIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9">
+      <img src="wholefoods.png" alt="OUR HOME WHOLE FOODS">
+      <span>WHOLE FOODS</span>
+    </a>
+  </div>
+  <div class="report-card">
+    <a href="https://app.powerbi.com/view?r=eyJrIjoiZDQyMmUxOGItNWMzNS00N2JlLTg5Y2YtZDI4M2YwNjlkOWYwIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9">
+      <img src="freshthyme.png" alt="OUR HOME FRESH THYME">
+      <span>FRESH THYME</span>
+    </a>
+  </div>
+  <div class="report-card">
+    <a href="https://app.powerbi.com/view?r=eyJrIjoiZGVlOGY1MzEtZjUzNy00N2UwLTgzZjMtNjdkMzA0YjQ4YWUzIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9">
+      <img src="wegmans.png" alt="OUR HOME WEGMANS">
+      <span>WEGMANS</span>
+    </a>
+  </div>
+  <div class="report-card">
+    <a href="https://app.powerbi.com/view?r=eyJrIjoiOTM5OTNhNmYtNTNlMy00NmNlLThmZDctZTkyYjllYjRhM2E2IiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9">
+      <img src="freshmarket.png" alt="OUR HOME FRESH MARKET">
+      <span>FRESH MARKET</span>
+    </a>
+  </div>
+  <div class="report-card">
+    <a href="https://app.powerbi.com/view?r=eyJrIjoiMDE1ZmM1ZDQtMDcyOS00MzljLWIyNmUtMjcyNzc0NTRiOTBhIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9">
+      <img src="publix.png" alt="OUR HOME PUBLIX">
+      <span>PUBLIX</span>
+    </a>
+  </div>
+  <div class="report-card">
+    <a href="https://app.powerbi.com/view?r=eyJrIjoiOGY1MzU1NmUtNzUwZC00NzE5LTljY2EtM2VmYTM4YWEzNjhhIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9">
+      <img src="heb.png" alt="OUR HOME HEB">
+      <span>HEB</span>
+    </a>
+  </div>
+  <div class="report-card">
+    <a href="https://app.powerbi.com/view?r=eyJrIjoiZjRmMzZkYTItNmQ3ZC00ZjkyLThkNTktMTllYWJmMjkzNGU2IiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9">
+      <img src="hannahford.png" alt="OUR HOME HANNAHFORD">
+      <span>HANNAHFORD</span>
+    </a>
+  </div>
+  <div class="report-card">
+    <a href="https://app.powerbi.com/view?r=eyJrIjoiYjBkNGRkYzctYWFlNS00YzYxLThjZjgtNDIyYTMxOWJiZDZlIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9">
+      <img src="stopandshop.png" alt="OUR HOME STOP AND SHOP">
+      <span>STOP AND SHOP</span>
+    </a>
+  </div>
+  <div class="report-card">
+    <a href="https://app.powerbi.com/view?r=eyJrIjoiYzliMzM3ZmUtNTkyMy00NDllLWE5OTUtODRmYjkwMTc0Mzk5IiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9">
+      <img src="harristeeter.png" alt="OUR HOME HARRIS TEETER">
+      <span>HARRIS TEETER</span>
+    </a>
+  </div>
+  <div class="report-card">
+    <a href="https://app.powerbi.com/view?r=eyJrIjoiNWYyMWRiOGMtY2UwOS00ZTMyLWIyODQtNTA4YWMzY2E0MjQxIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9">
+      <img src="jewel.png" alt="OUR HOME JEWEL OSCO">
+      <span>JEWEL OSCO</span>
+    </a>
+  </div>
+  <div class="report-card">
+    <a href="https://app.powerbi.com/view?r=eyJrIjoiMzZiY2I0MmEtN2NhOC00NTcxLTkxZWItYzY3YzVhOGRkYTJmIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9">
+      <img src="raleys.png" alt="OUR HOME RALEYS">
+      <span>RALEYS</span>
+    </a>
+  </div>
+  <div class="report-card">
+    <a href="https://app.powerbi.com/view?r=eyJrIjoiOTU2Y2NhOGItYWFmMi00Yzc3LThjMjctMGRkMGZhODI5NTMwIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9">
+      <img src="shoprite.png" alt="OUR HOME SHOPRITE">
+      <span>SHOPRITE</span>
+    </a>
+  </div>
+  <div class="report-card">
+    <a href="https://app.powerbi.com/view?r=eyJrIjoiNzhhYTNkOTUtNDI1Ny00Nzg0LWI2MGYtODM1ZjBiZTMzYjQ3IiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9">
+      <img src="independent.png" alt="OUR HOME INDEPENDENT">
+      <span>INDEPENDENT</span>
+    </a>
+  </div>
+  <div class="report-card">
+    <a href="https://app.powerbi.com/view?r=eyJrIjoiNTk3NTE4M2YtMWRlYS00N2FhLWJiNGQtNDQ3ZWI0YjE0ZWMzIiwidCI6ImRkOWE4ODUyLTUzOWUtNGFkZC1hOGY3LTBmZjQzYjI0ZWIwYSIsImMiOjN9">
+      <img src="naturalgrocers.png" alt="OUR HOME NATURAL GROCERS">
+      <span>NATURAL GROCERS</span>
+    </a>
+  </div>
+</div>
+
+
+    <!-- FOOTER -->
+    <footer>
+      &copy; 2025 Our Home Reports. Made by Carlos Banegas from CAFortune.
+      <a href="https://www.our-home.com" target="_blank">Visit Our Home</a>
+    </footer>
+  </div>
+</body>
+</html>
